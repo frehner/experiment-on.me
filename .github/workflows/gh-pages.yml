@@ -10,8 +10,10 @@ jobs:
     name: Publish to gh-pages branch
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: |
-          npm ci
-          npm run build
-          npm run gh-pages-deploy
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - run: npm ci
+      - run: npm run build
+      - run: npm run gh-pages-deploy
