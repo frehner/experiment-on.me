@@ -1,0 +1,17 @@
+name: gh-pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: Publish to gh-pages branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: |
+          npm ci
+          npm run build
+          npm run gh-pages-deploy
