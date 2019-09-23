@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gh-pages-deploy": "gh-pages -d dist",
+    "gh-pages-deploy": "gh-pages -d dist --user \"github actions <afrehner.work@gmail.com>\"",
     "watch": "webpack-dev-server",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
