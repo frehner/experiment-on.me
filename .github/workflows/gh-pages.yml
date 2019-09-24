@@ -20,3 +20,4 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: dist
+          CNAME: experiment-on.me
